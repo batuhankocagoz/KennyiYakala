@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="180dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnOyna"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button_bg"
+            android:text="OYUNU BAŞLAT"
+            android:textColor="#f06307"
+            android:textSize="20sp"
+            android:textStyle="bold"></Button>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/top_view"
+        android:layout_width="280dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+    </View>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ZORLUK SEVİYESİ"
+        android:textColor="#f06307"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/seekBar"
+        app:layout_constraintEnd_toEndOf="@+id/top_view"
+        app:layout_constraintStart_toStartOf="@+id/top_view"
+        app:layout_constraintTop_toTopOf="@+id/top_view">
+    </TextView>
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="135dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="30dp"
+        android:thumbTint="#f06307"
+        android:max="2"
+        android:progress="1"
+        app:layout_constraintBottom_toBottomOf="@+id/top_view"
+        app:layout_constraintEnd_toEndOf="@+id/top_view"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="@+id/top_view"
+        app:layout_constraintTop_toTopOf="@+id/top_view"
+        app:layout_constraintVertical_bias="0.52">
+    </SeekBar>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
